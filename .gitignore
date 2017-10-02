@@ -99,3 +99,10 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# by djangogirls
+*.pyc
+*~
+db.sqlite3
+/static
+.DS_Store
