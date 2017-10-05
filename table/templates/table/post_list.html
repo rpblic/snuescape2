@@ -1,6 +1,7 @@
+{% load staticfiles %}
 <html>
     <head>
-
+      <link rel="stylesheet" href="{% static 'css/table.css' %}">
     </head>
     <body>
         <div class="container-fluid">
@@ -123,71 +124,5 @@
 
     </div>
     </div>
-
-    <style>
-
-        body {
-            background-color: #53777A;
-            font-family: san-serif;
-            color: white;
-            font-size: 2vw;
-        }
-
-        h1, h2 {
-            font-size: 2vw;
-            font-family: 'Hanna', serif;
-        }
-
-        .header{
-            position: fixed;
-            text-align: center;
-            font-family: 'Hanna', serif;
-            background-color: #C02942;
-            color: white;
-            height:130px;
-            z-index: 1000;
-        }
-
-        .menubox{
-            width: 100%;
-        }
-        .menu{
-            width: 33%;
-        }
-
-        table{
-            margin: auto;
-        }
-
-        .table, .price{
-            background-color: #ECE5CE;
-            border-radius:20px;
-            font-size: 13px;
-            color: #202020;
-        }
-
-        .tg-yw4l {
-            font-weight: bold;
-        }
-
-        th {
-            background-color: #542437;
-            color: white;
-            font-size: 1.8vw;
-        }
-
-        td {
-            width: 20%;
-            font-size: 1.8vw;
-        }
-
-        .content {
-            margin-top: 125px;
-            text-align: center;
-            font-size: 1.5vw;
-            color: white;
-        }
-
-    </style>
     </body>
 </html>
