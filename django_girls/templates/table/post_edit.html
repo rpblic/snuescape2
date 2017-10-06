@@ -1,0 +1,9 @@
+{% extends 'table/base.html' %}
+
+{% block postings %}
+  <h1>New Post</h1>
+  <form method= "POST" class= "post-form">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+  </form>
+{% endblock %}

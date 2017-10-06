@@ -1,0 +1,15 @@
+{% extends 'table/base.html' %}
+
+{% block postings %}
+  <div class="header col-xs-12 col-md-12">
+  <h1>#SNU_Escape_post_ex</h1>
+  {% for post in posts %}
+      <p><h3><a href="{% url 'post_detail' pk=post.pk %}">
+        {{ post.title }}
+      </a></h3> <br>
+        published: {{ post.published_date }}</p>
+      <p>{{ post.text|linebreaksbr }}</p>
+      <br>
+  {% endfor %}
+  </div>
+{% endblock %}
