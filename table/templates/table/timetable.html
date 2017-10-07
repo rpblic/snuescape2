@@ -1,0 +1,12 @@
+{% extends 'table/base.html' %}
+
+{% block booking %}
+<!-- table opens in base html -->
+{% if messages %}
+<script>
+  {% for message in messages %}
+    alert('{{ message }}');
+  {% endfor %}
+</script>
+{% endif %}
+{% endblock %}

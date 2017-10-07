@@ -1,7 +1,16 @@
 from django.db import models
 from django.utils import timezone
+import datetime
 
 # Create your models here.
+def datemake(pk):
+    # pk: 1026
+    pk= int(pk)
+    return datetime.date(2017, pk//100, pk-100*(pk//100))
+
+def timemake(pk):
+    pk= int(pk)
+    return datetime.time(pk, 00, 00)
 
 class Rserv(models.Model):
     rserv_date= models.DateTimeField(
@@ -29,5 +38,8 @@ class Rserv(models.Model):
         self.save()
         #save로 해야 되나? modify 같은 걸 할 수 있으려나?
 
-    # def __str__(self):
-    #     return self.title
+    # def checker(self, rservs):
+    #     for
+
+    def __str__(self):
+        return self.title

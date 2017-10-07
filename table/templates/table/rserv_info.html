@@ -1,0 +1,12 @@
+{% extends 'table/base.html' %}
+
+{% block booking %}
+    <form method= "POST" class= "rserv-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class= "row">
+      <button type="submit">예약하기</button>
+      </div>
+    </form>
+
+{% endblock %}

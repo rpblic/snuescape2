@@ -1,88 +1,68 @@
 {% load staticfiles %}
 <html>
     <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- CSS Setting -->
       <link rel="stylesheet" href="{% static 'css/table.css' %}">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     </head>
 
     <body>
-      <div class= "row">
-        {% if user.is_authenticated %}
-          <a href="{% url 'post_new' %}" class="top-menu">
-            <h2>add post</h2>
-          </a>
-        {% endif %}
-      </div>
+      <div class= "row"><h1>
+        Snuescape Logo Needed
+      </h1></div>
+      {% if user.is_authenticated %}
+        <div id="admin">
+          <!-- admin -->
+        </div>
+      {% endif %}
 
         <div class="row">
-        {% block postings %}
+        {% block booking %}
         {% endblock %}
         </div>
 
-    <div class="row">
-      <div class="content col-xs-12 col-md-10 col-md-offset-1" id="book">
-          <h1>[ 예 - 약 ]</h1>
-      <table class="table table-hover">
-        <tr>
-          <th>시간</th>
-          <th>4/17(월)</th>
-          <th>4/18(화)</th>
-          <th>4/19(수)</th>
-          <th>4/20(목)</th>
-        </tr>
-        <tr class="time11">
-          <td class="tg-yw4l">11시~12시</td>
-          <td class="date17"><%= showdata(17, 11) %></td>
-          <td class="date18"><%= showdata(18, 11) %></td>
-          <td class="date19"><%= showdata(19, 11) %></td>
-          <td class="date20"><%= showdata(20, 11) %></td>
-        </tr>
-        <tr class="time12">
-          <td class="tg-yw4l">12시~1시</td>
-          <td class="date17"><%= showdata(17, 12) %></td>
-          <td class="date18"><%= showdata(18, 12) %></td>
-          <td class="date19"><%= showdata(19, 12) %></td>
-          <td class="date20"><%= showdata(20, 12) %></td>
-        </tr>
-        <tr class="time13">
-          <td class="tg-yw4l">1시~2시</td>
-          <td class="date17"><%= showdata(17, 13) %></td>
-          <td class="date18"><%= showdata(18, 13) %></td>
-          <td class="date19"><%= showdata(19, 13) %></td>
-          <td class="date20"><%= showdata(20, 13) %></td>
-        </tr>
-        <tr class="time14">
-          <td class="tg-yw4l">2시~3시</td>
-          <td class="date17"><%= showdata(17, 14) %></td>
-          <td class="date18"><%= showdata(18, 14) %></td>
-          <td class="date19"><%= showdata(19, 14) %></td>
-          <td class="date20"><%= showdata(20, 14) %></td>
-        </tr>
-        <tr class="time15">
-          <td class="tg-yw4l">3시~4시</td>
-          <td class="date17"><%= showdata(17, 15) %></td>
-          <td class="date18"><%= showdata(18, 15) %></td>
-          <td class="date19"><%= showdata(19, 15) %></td>
-          <td class="date20"><%= showdata(20, 15) %></td>
-        </tr>
-        <tr class="time16">
-          <td class="tg-yw4l">4시~5시</td>
-          <td class="date17"><%= showdata(17, 16) %></td>
-          <td class="date18"><%= showdata(18, 16) %></td>
-          <td class="date19"><%= showdata(19, 16) %></td>
-          <td class="date20"><%= showdata(20, 16) %></td>
-        </tr>
-        <tr class="time17">
-          <td class="tg-yw4l">5시~6시</td>
-          <td class="date17"><%= showdata(17, 17) %></td>
-          <td class="date18"><%= showdata(18, 17) %></td>
-          <td class="date19"><%= showdata(19, 17) %></td>
-          <td class="date20"><%= showdata(20, 17) %></td>
-        </tr>
-          <tr><td colspan=5><< SNU_Escape는 선불예약제로 운영됩니다. 예약문의는 23시까지 010-9475-5522로(SMS)! >></td></tr>
-      </table>
+        <div class="row">
+          <!-- timetable! -->
+          <div class="table-responsive col-xs-12 col-md-10 col-md-offset-1" id="book">
+          <table class="table .table-hover">
+            <tr>
+              <th><a href="{% url 'rserv_date' pk=1016 %}">
+                10.16(월)</a></th>
+              <th><a href="{% url 'rserv_date' pk=1017 %}">
+                10.17(화)</a></th>
+              <th><a href="{% url 'rserv_date' pk=1018 %}">
+                10.18(수)</a></th>
+              <th><a href="{% url 'rserv_date' pk=1019 %}">
+                10.19(목)</a></th>
+              <th><a href="{% url 'rserv_date' pk=1020 %}">
+                10.20(금)</a></th>
 
-      </div>
+            </tr>
+            <tr>
+              <th><a href="{% url 'rserv_date' pk=1023 %}">
+                10.23(월)</a></th>
+              <th><a href="{% url 'rserv_date' pk=1024 %}">
+                10.24(화)</a></th>
+              <th><a href="{% url 'rserv_date' pk=1025 %}">
+                10.25(수)</a></th>
+              <th><a href="{% url 'rserv_date' pk=1026 %}">
+                10.26(목)</a></th>
+              <th><a href="{% url 'rserv_date' pk=1027 %}">
+                10.27(금)</a></th>
+            </tr>
+          </table><br><br>
+        </div></div>
+
+        <div class= "row">
+          확인하기
+        </div>
     <br>
-    </div>
+    <div class= "row">
+      <div id="info">
+        info
+      </div>
     </body>
 </html>
