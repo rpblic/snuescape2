@@ -3,66 +3,102 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="widtd=device-widtd, initial-scale=1">
       <!-- CSS Setting -->
       <link rel="stylesheet" href="{% static 'css/table.css' %}">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     </head>
 
     <body>
-      <div class= "row"><h1>
+      <div><h1 class= "text-center" style="margin-bottom: 40px;">
         Snuescape Logo Needed
       </h1></div>
-      {% if user.is_authenticated %}
-        <div id="admin">
-          <!-- admin -->
-        </div>
-      {% endif %}
 
-        <div class="row">
-        {% block booking %}
-        {% endblock %}
-        </div>
-
-        <div class="row">
-          <!-- timetable! -->
-          <div class="table-responsive col-xs-12 col-md-10 col-md-offset-1" id="book">
-          <table class="table .table-hover">
-            <tr>
-              <th><a href="{% url 'rserv_date' pk=1016 %}">
-                10.16(월)</a></th>
-              <th><a href="{% url 'rserv_date' pk=1017 %}">
-                10.17(화)</a></th>
-              <th><a href="{% url 'rserv_date' pk=1018 %}">
-                10.18(수)</a></th>
-              <th><a href="{% url 'rserv_date' pk=1019 %}">
-                10.19(목)</a></th>
-              <th><a href="{% url 'rserv_date' pk=1020 %}">
-                10.20(금)</a></th>
-
-            </tr>
-            <tr>
-              <th><a href="{% url 'rserv_date' pk=1023 %}">
-                10.23(월)</a></th>
-              <th><a href="{% url 'rserv_date' pk=1024 %}">
-                10.24(화)</a></th>
-              <th><a href="{% url 'rserv_date' pk=1025 %}">
-                10.25(수)</a></th>
-              <th><a href="{% url 'rserv_date' pk=1026 %}">
-                10.26(목)</a></th>
-              <th><a href="{% url 'rserv_date' pk=1027 %}">
-                10.27(금)</a></th>
-            </tr>
-          </table><br><br>
-        </div></div>
-
-        <div class= "row">
-          확인하기
-        </div>
-    <br>
-    <div class= "row">
-      <div id="info">
-        info
+      <div class="container" style="margin-bottom: 10px;">
+      {% block booking %}
+      {% endblock %}
       </div>
+
+      <!-- timetable! -->
+      <div class="container" id="book">
+      <table class="table .table-striped text-center" style="margin-bottom: 10px;">
+        <tr class="row">
+          <th colspan=5 class="tg-yw4l">예약하기</th>
+        </tr>
+        <tr class="row">
+          <td><a href="{% url 'rserv_date' pk=1016 %}">
+            10.16(월)</a></td>
+          <td><a href="{% url 'rserv_date' pk=1017 %}">
+            10.17(화)</a></td>
+          <td><a href="{% url 'rserv_date' pk=1018 %}">
+            10.18(수)</a></td>
+          <td><a href="{% url 'rserv_date' pk=1019 %}">
+            10.19(목)</a></td>
+          <td><a href="{% url 'rserv_date' pk=1020 %}">
+            10.20(금)</a></td>
+        </tr>
+
+        <tr class="row">
+          <td><a href="{% url 'rserv_date' pk=1023 %}">
+            10.23(월)</a></td>
+          <td><a href="{% url 'rserv_date' pk=1024 %}">
+            10.24(화)</a></td>
+          <td><a href="{% url 'rserv_date' pk=1025 %}">
+            10.25(수)</a></td>
+          <td><a href="{% url 'rserv_date' pk=1026 %}">
+            10.26(목)</a></td>
+          <td><a href="{% url 'rserv_date' pk=1027 %}">
+            10.27(금)</a></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="container" style="margin-bottom: 30px;">
+      <button type="button" class="btn btn-primary btn-sm pull-right">예약 확인하기</button>
+    </div>
+
+
+    <div class= "container" style="margin-bottom: 30px;">
+        <!-- <img src="https://preview.ibb.co/fx8VbQ/Kakao_Talk_20170416_165207782.jpg"
+        alt="Kakao_Talk_20170416_165207782" class= "img-responsive center-block"> -->
+        img needed
+    </div><div class= "container" style="margin-bottom: 10px;">
+        <p>안녕하세요! 저희는 SNUSV 소속 학생들입니다.<br>
+        동아리 프로젝트의 일환으로, 이번에 간단한 방탈출을 기획하여 여러분께 직접 서비스 해보려고 합니다.<br>
+        전문적이진 않지만 나름 재밌게 만들었으니 삼삼오오 오셔서 즐겨주세요!</p>
+    </div>
+
+    <div id="info" class="container text-left" style="border: 1px solid gray; margin-bottom: 30px;">
+        <br><ul>
+            <li>시간: 예약한 시간부터 40분. 시간은 꼭 지켜주세요!</li>
+            <li>장소: 31동 301호. 공대간이식당 뒷문 쪽에 31동 입구가 있습니다.</li>
+            <li>가격:<br>
+                <table class="table pull-left text-center">
+                    <tr class="row">
+                        <th class="col-xs-3 tg-yw4l">2명</th>
+                        <th class="col-xs-3 tg-yw4l">3명</th>
+                        <th class="col-xs-3 tg-yw4l">4명</th>
+                    </tr>
+                    <tr class="row">
+                        <td class="col-xs-3">인당 7000원</td>
+                        <td class="col-xs-3">인당 6000원</td>
+                        <td class="col-xs-3">인당 5000원</td>
+                    </tr>
+                    <tr class="row"><td colspan=3 class="col-xs-9">
+                        SNU_Escape는 선불예약제입니다. <br>
+                       예약문의는 23시까지 010-3892-9144로(SMS)!</td></tr>
+                </table>
+            </li>
+            <li>내부에서는 스포 방지 차원에서 사진촬영을 할 수 없습니다. 대신 클리어하시면 기념사진을 찍어드려요!</li>
+            <li>예약 및 취소는 전일까지만 가능합니다. 당일취소는 안돼요.</li>
+        </ul><br>
+    </div>
+    <div class="container text-center", style="margin-bottom: 30px;">
+        SNUSV logo needed
+    </div>
     </body>
 </html>

@@ -1,10 +1,11 @@
 {% extends 'table/base.html' %}
 
 {% block booking %}
-<table class="table .table-hover">
+<table class="table table-hover text-center">
+  <tr><th class="tg-yw4l">예약시간</th></tr>
   <tr class="time11">
     {% if rserv11 %}
-    <td class="tg-yw4l">
+    <td class="danger">
       11시~12시
     </td>
     {% endif %}
@@ -17,7 +18,7 @@
 
   <tr class="time12">
     {% if rserv12 %}
-    <td class="tg-yw4l">
+    <td class="danger">
       12시~13시
     </td>
     {% endif %}
@@ -30,7 +31,7 @@
 
   <tr class="time13">
     {% if rserv13 %}
-    <td class="tg-yw4l">
+    <td class="danger">
       13시~14시
     </td>
     {% endif %}
@@ -42,7 +43,7 @@
   </tr>
   <tr class="time14">
     {% if rserv14 %}
-    <td class="tg-yw4l">
+    <td class="danger">
       14시~15시
     </td>
     {% endif %}
@@ -55,7 +56,7 @@
 
   <tr class="time15">
     {% if rserv15 %}
-    <td class="tg-yw4l">
+    <td class="danger">
       15시~16시
     </td>
     {% endif %}
@@ -68,7 +69,7 @@
 
   <tr class="time16">
     {% if rserv16 %}
-    <td class="tg-yw4l">
+    <td class="danger">
       16시~17시
     </td>
     {% endif %}
@@ -81,7 +82,7 @@
 
   <tr class="time17">
     {% if rserv17 %}
-    <td class="tg-yw4l">
+    <td class="danger">
       17시~18시
     </td>
     {% endif %}
@@ -92,5 +93,4 @@
     {% endif %}
   </tr>
 </table>
-
 {% endblock %}

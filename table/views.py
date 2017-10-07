@@ -36,7 +36,8 @@ def rserv_info(request, rdate, pk):
             return redirect('timetable')
     else:
         form= RservForm()
-    return render(request, 'table/rserv_info.html', {'form': form})
+    return render(request, 'table/rserv_info.html',\
+            {'rservdatetime': datetime_pk, 'form': form})
 
 def rserv_edit(request, rdate, pk):
     return None

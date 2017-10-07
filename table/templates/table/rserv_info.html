@@ -1,12 +1,26 @@
 {% extends 'table/base.html' %}
+{% load i18n widget_tweaks %}
 
 {% block booking %}
-    <form method= "POST" class= "rserv-form">
+  <form method= "POST" class="container form-horizontal" role="form">
+    <div class="row">
+      <fieldset class="control-group" style="margin-bottom: 15px;">
+        <label for="rserv_date" class="control-label col-xs-3">예약일 </label>
+        <p class="help-text col-xs-9">{{ rservdatetime }}</p>
+      </fieldset>
+    </div>
+    <div class="row form-group">
       {% csrf_token %}
-      {{ form.as_p }}
-      <div class= "row">
-      <button type="submit">예약하기</button>
-      </div>
-    </form>
-
+      {% for field in form %}
+      <fieldset class="control-group" style="margin-bottom: 15px;">
+          <label class="control-label col-xs-3" for="id_{{ field.name }}">{{ field.label }}</label>
+          <div class="controls col-xs-9">
+              {{ field|attr:"class:form-control" }}
+          </div>
+      </fieldset>
+      {% endfor %}
+      <button class="btn btn-primary pull-right" type="submit">예약하기</button>
+    </div>
+  </form>
+  <br>
 {% endblock %}

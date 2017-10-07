@@ -2,6 +2,11 @@
 
 {% block booking %}
 <!-- table opens in base html -->
+{% if user.is_authenticated %}
+  <div id="admin">
+    <!-- admin -->
+  </div>
+{% endif %}
 {% if messages %}
 <script>
   {% for message in messages %}

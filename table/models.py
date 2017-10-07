@@ -9,37 +9,38 @@ def datemake(pk):
     return datetime.date(2017, pk//100, pk-100*(pk//100))
 
 def timemake(pk):
+    #pk: 11
     pk= int(pk)
     return datetime.time(pk, 00, 00)
 
 class Rserv(models.Model):
     rserv_date= models.DateTimeField(
     primary_key= True
-    )
+    )   #예약일자
     reserved= models.BooleanField(
     default= False
-    )
+    )   #예약여부
     applied= models.BooleanField(
     default= False
-    )
+    )   #예약확인여부
     book_date= models.DateTimeField(
     default= timezone.now
-    )
-    rserv_er= models.CharField(max_length= 200)
-    rserv_call= models.CharField(max_length= 20)
+    )   #신청일자
+    rserv_er= models.CharField(max_length= 200)         #예약인
+    rserv_usernum= models.SmallIntegerField(default= 2) #신청인원
+    rserv_call= models.CharField(max_length= 20)        #예약인 전화번호
 
-    def book(self):
-        self.rserv_date= timezone.now()
-        self.reserved= True
-        self.save()
-
-    def apply(self):
-        self.checked= True
-        self.save()
-        #save로 해야 되나? modify 같은 걸 할 수 있으려나?
+    # def book(self):
+    #     self.rserv_date= timezone.now()
+    #     self.reserved= True
+    #     self.save()
+    #
+    # def apply(self):
+    #     self.checked= True
+    #     self.save()
 
     # def checker(self, rservs):
     #     for
 
     def __str__(self):
-        return self.title
+        return str(self.rserv_date)
