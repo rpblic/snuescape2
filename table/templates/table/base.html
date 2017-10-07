@@ -19,54 +19,60 @@
       </h1></div>
 
       <div class="container" style="margin-bottom: 10px;">
-      {% block booking %}
-      {% endblock %}
+        <div class="row"><div class="col-xs-12 col-md-6">
+          {% block booking %}
+          {% endblock %}
+
+          <!-- timetable! -->
+          <table class="table .table-striped text-center" style="margin-bottom: 30px;">
+            <tr>
+              <th colspan=5 class="tg-yw4l">예약하기</th>
+            </tr>
+            <tr>
+              <td><a href="{% url 'rserv_date' pk=1016 %}">
+                10.16(월)</a></td>
+              <td><a href="{% url 'rserv_date' pk=1017 %}">
+                10.17(화)</a></td>
+              <td><a href="{% url 'rserv_date' pk=1018 %}">
+                10.18(수)</a></td>
+              <td><a href="{% url 'rserv_date' pk=1019 %}">
+                10.19(목)</a></td>
+              <td><a href="{% url 'rserv_date' pk=1020 %}">
+                10.20(금)</a></td>
+            </tr>
+
+            <tr>
+              <td><a href="{% url 'rserv_date' pk=1023 %}">
+                10.23(월)</a></td>
+              <td><a href="{% url 'rserv_date' pk=1024 %}">
+                10.24(화)</a></td>
+              <td><a href="{% url 'rserv_date' pk=1025 %}">
+                10.25(수)</a></td>
+              <td><a href="{% url 'rserv_date' pk=1026 %}">
+                10.26(목)</a></td>
+              <td><a href="{% url 'rserv_date' pk=1027 %}">
+                10.27(금)</a></td>
+            </tr>
+          </table>
+        </div>
+        <div class= "col-xs-12 col-md-6" style="margin-bottom: 30px;">
+            <img src="https://preview.ibb.co/fx8VbQ/Kakao_Talk_20170416_165207782.jpg"
+            alt="Kakao_Talk_20170416_165207782" class= "img-responsive center-block">
+            <!-- img needed -->
+        </div>
+      </div>
+        <div class="row" style="padding-bottom: 30px; border-bottom: 1px solid #cccccc;">
+          <button type="button" class="btn btn-primary btn-sm col-xs-12 col-md-6">
+            예약 확인하기
+          </button></div>
       </div>
 
-      <!-- timetable! -->
-      <div class="container" id="book">
-      <table class="table .table-striped text-center" style="margin-bottom: 10px;">
-        <tr class="row">
-          <th colspan=5 class="tg-yw4l">예약하기</th>
-        </tr>
-        <tr class="row">
-          <td><a href="{% url 'rserv_date' pk=1016 %}">
-            10.16(월)</a></td>
-          <td><a href="{% url 'rserv_date' pk=1017 %}">
-            10.17(화)</a></td>
-          <td><a href="{% url 'rserv_date' pk=1018 %}">
-            10.18(수)</a></td>
-          <td><a href="{% url 'rserv_date' pk=1019 %}">
-            10.19(목)</a></td>
-          <td><a href="{% url 'rserv_date' pk=1020 %}">
-            10.20(금)</a></td>
-        </tr>
-
-        <tr class="row">
-          <td><a href="{% url 'rserv_date' pk=1023 %}">
-            10.23(월)</a></td>
-          <td><a href="{% url 'rserv_date' pk=1024 %}">
-            10.24(화)</a></td>
-          <td><a href="{% url 'rserv_date' pk=1025 %}">
-            10.25(수)</a></td>
-          <td><a href="{% url 'rserv_date' pk=1026 %}">
-            10.26(목)</a></td>
-          <td><a href="{% url 'rserv_date' pk=1027 %}">
-            10.27(금)</a></td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="container" style="margin-bottom: 30px;">
-      <button type="button" class="btn btn-primary btn-sm pull-right">예약 확인하기</button>
-    </div>
 
 
-    <div class= "container" style="margin-bottom: 30px;">
-        <!-- <img src="https://preview.ibb.co/fx8VbQ/Kakao_Talk_20170416_165207782.jpg"
-        alt="Kakao_Talk_20170416_165207782" class= "img-responsive center-block"> -->
-        img needed
-    </div><div class= "container" style="margin-bottom: 10px;">
+
+
+
+    <div class= "container" style="margin-bottom: 10px;">
         <p>안녕하세요! 저희는 SNUSV 소속 학생들입니다.<br>
         동아리 프로젝트의 일환으로, 이번에 간단한 방탈출을 기획하여 여러분께 직접 서비스 해보려고 합니다.<br>
         전문적이진 않지만 나름 재밌게 만들었으니 삼삼오오 오셔서 즐겨주세요!</p>

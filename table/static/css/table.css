@@ -6,62 +6,28 @@ body {
     background-color: #53777A;
     font-family: san-serif;
     color: white;
-    font-size: 2vw;
 }
-
-h1, h2 {
-    font-size: 2vw;
-    font-family: 'Hanna', serif;
-}
-
-.header{
-    position: fixed;
-    text-align: center;
-    font-family: 'Hanna', serif;
-    /*background-color: #C02942;*/
-    color: white;
-    height:130px;
-    z-index: 1000;
-}
-
-.menubox{
-    width: 100%;
-}
-.menu{
-    width: 33%;
-}
-
-/*table{
-    margin: auto;
-}
-
-.table, .price{
-    background-color: #ECE5CE;
-    border-radius:20px;
-    font-size: 13px;
-    color: #202020;
-}*/
 
 .tg-yw4l {
-    font-size: 2vw;
+    font-size: 16px;
     font-weight: bold;
     text-align: center;
 }
 
 th {
-    font-size: 1.8vw;
+    font-size: 20px;
     background-color: #cccccc;
 }
 
 td {
     width: 20%;
-    font-size: 1.8vw;
+    font-size: 16px;
 }
 
 .content {
     margin-top: 125px;
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 1.0vw;
     color: white;
 }
 

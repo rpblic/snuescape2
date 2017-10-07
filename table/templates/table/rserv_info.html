@@ -3,22 +3,24 @@
 
 {% block booking %}
   <form method= "POST" class="container form-horizontal" role="form">
-    <div class="row">
+    <div class="row"><div class="col-xs-12 col-md-6">
       <fieldset class="control-group" style="margin-bottom: 15px;">
         <label for="rserv_date" class="control-label col-xs-3">예약일 </label>
         <p class="help-text col-xs-9">{{ rservdatetime }}</p>
       </fieldset>
-    </div>
-    <div class="row form-group">
+    </div></div>
+    <div class="row form-group"><div class="col-xs-12 col-md-6">
       {% csrf_token %}
       {% for field in form %}
       <fieldset class="control-group" style="margin-bottom: 15px;">
           <label class="control-label col-xs-3" for="id_{{ field.name }}">{{ field.label }}</label>
-          <div class="controls col-xs-9">
+          <div class="controls col-xs-6">
               {{ field|attr:"class:form-control" }}
           </div>
       </fieldset>
       {% endfor %}
+    </div></div>
+    <div class="row col-xs-10 col-md-6">
       <button class="btn btn-primary pull-right" type="submit">예약하기</button>
     </div>
   </form>
