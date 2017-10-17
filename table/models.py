@@ -19,17 +19,29 @@ class Rserv(models.Model):
     )   #예약일자
     rserv_room= models.SmallIntegerField(default=2)
     reserved= models.BooleanField(
+    verbose_name= "예약여부",
     default= False
     )   #예약여부
     applied= models.BooleanField(
+    verbose_name= "확인여부",
     default= False
     )   #예약확인여부
     book_date= models.DateTimeField(
+    verbose_name= "예약한날",
     default= timezone.now
     )   #신청일자
-    rserv_er= models.CharField(max_length= 200)         #예약인
-    rserv_usernum= models.SmallIntegerField(default= 2) #신청인원
-    rserv_call= models.CharField(max_length= 20)        #예약인 전화번호
+    rserv_er= models.CharField(
+    verbose_name= "예약인",
+    max_length= 200
+    )         #예약인
+    rserv_usernum= models.SmallIntegerField(
+    verbose_name= "신청인원",
+    default= 2
+    ) #신청인원
+    rserv_call= models.CharField(
+    verbose_name="예약인 연락처",
+    max_length= 20
+    )        #예약인 전화번호
 
     # def book(self):
     #     self.rserv_date= timezone.now()
