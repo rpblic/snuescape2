@@ -17,6 +17,7 @@ class Rserv(models.Model):
     rserv_date= models.DateTimeField(
     primary_key= True
     )   #예약일자
+    rserv_room= models.SmallIntegerField(default=2)
     reserved= models.BooleanField(
     default= False
     )   #예약여부
