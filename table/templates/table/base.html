@@ -14,26 +14,22 @@
     </head>
 
     <body>
-      <div><h1 class= "text-center" style="margin-bottom: 40px;">
-        Snuescape Logo Needed
-      </h1></div>
+      <div class= "container"><a href="{% url 'timetable' %}">
+        <img src="https://i.imgur.com/7bzsHb2.jpg", width="600", height="476", alt="Snusv", class="img-responsive center-block">
+      </a></div>
+
 
       <div class="container" style="margin-bottom: 10px;">
-        <div class="row">
-        <div style="margin-bottom: 30px;">
-
           <div class="col-xs-12 col-md-6">
             {% block booking %}
             {% endblock %}
             <!-- timetable! -->
             <table class="table .table-striped text-center" style="margin-bottom: 30px;">
               <tr>
-                <th colspan=5 class="tg-yw4l">예약하기</th>
+                <th colspan=4 class="tg-yw4l">예약하기</th>
               </tr>
 
               <tr>
-                <td><a href="{% url 'rserv_date' pk=1023 %}">
-                  10.23(월)</a></td>
                 <td><a href="{% url 'rserv_date' pk=1024 %}">
                   10.24(화)</a></td>
                 <td><a href="{% url 'rserv_date' pk=1025 %}">
@@ -45,11 +41,9 @@
               </tr>
             </table>
           </div>
-
-            <img src="https://preview.ibb.co/fx8VbQ/Kakao_Talk_20170416_165207782.jpg"
-            alt="Kakao_Talk_20170416_165207782" class= "img-responsive center-block col-xs-12 col-md-6">
+          <div>
+            <img src="https://i.imgur.com/nAG87tH.png" alt="Snusv", class= "img-responsive center-block col-xs-12 col-md-6">
             <!-- img needed -->
-
         </div>
       </div>
         <!-- <div class="row" style="padding-bottom: 30px; border-bottom: 1px solid #cccccc;">
@@ -58,9 +52,10 @@
           </button></div>
       </div> -->
 
-    <br><div class= "container page-header" style="margin-bottom: 10px;">
-        <h3><b>안녕하세요! 저희는 SNUSV 프로젝트 팀 SNUEscape입니다.<br><br>
-        지난 봄 공전의 히트를 기록한 서울대 내 방탈출 게임 SNUEscape가 다시 돌아왔습니다.<br>
+    <br>
+    <div class= "container page-header" style="margin-bottom: 10px;">
+        <h3><b>안녕하세요! 저희는 SNUSV 프로젝트 팀 SNUescape입니다.<br><br>
+        지난 봄 공전의 히트를 기록한 서울대 내 방탈출 게임 SNUescape가 다시 돌아왔습니다.<br>
         - 더 짜릿한 스토리와 새로운 트릭과 함께요!</b></h3>
     </div>
 
@@ -71,17 +66,16 @@
             <li>가격:</li>
                 <table class="table pull-left text-center">
                     <tr class="row">
-                        <th class="col-xs-3 tg-yw4l">2명</th>
-                        <th class="col-xs-3 tg-yw4l">3명</th>
-                        <th class="col-xs-3 tg-yw4l">4명 이상</th>
+                        <th class="col-xs-4 tg-yw4l">2명</th>
+                        <th class="col-xs-4 tg-yw4l">3명 이상</th>
                     </tr>
                     <tr class="row">
-                        <td class="col-xs-3">인당 10000원</td>
-                        <td class="col-xs-3">인당 9000원</td>
-                        <td class="col-xs-3">인당 8000원</td>
+                        <td class="col-xs-4">인당 10000원</td>
+                        <td class="col-xs-4">인당 8000원</td>
                     </tr>
                   </table>
-                  <p class="text-center">SNUEscape는 선불예약제입니다. 예약 후 홈페이지/문자로 보내 드리는 계좌로 입금하면 예약이 완료됩니다.<br>
+                  <p class="text-left">SNUEscape는 선불예약제입니다.
+                    예약 후 홈페이지/문자로 보내 드리는 계좌로 입금하면 예약이 완료됩니다.
                   24시간 내에 입금하지 않으면 예약이 취소되니 잊지 말아 주세요.<br>
                  예약 변경 및 문의는 23시까지 010-3892-9144로(SMS)!</p>
 
@@ -89,8 +83,8 @@
             <li>예약 및 취소는 전일까지만 가능합니다. 당일취소는 안돼요.</li>
         </ul><br>
     </div>
-    <div class="container text-center", style="margin-bottom: 30px;">
-        SNUSV logo needed
+    <div style="margin-bottom: 30px;">
+      <img src="https://i.imgur.com/35tVn0P.png" width= "253"", height="60", class="img-responsive center-block", alt="Snusv">
     </div>
     </body>
 </html>

@@ -14,24 +14,17 @@ def rserv_date(request, pk):
                                 rserv_date__day= date_pk.day).exclude(reserved= False)
 
     rserv11_2= rservs.filter(rserv_date__hour= 11).filter(rserv_room= 2).exists()
-    rserv11_3= rservs.filter(rserv_date__hour= 11).filter(rserv_room= 3).exists()
     rserv12_2= rservs.filter(rserv_date__hour= 12).filter(rserv_room= 2).exists()
-    rserv12_3= rservs.filter(rserv_date__hour= 12).filter(rserv_room= 3).exists()
     rserv13_2= rservs.filter(rserv_date__hour= 13).filter(rserv_room= 2).exists()
-    rserv13_3= rservs.filter(rserv_date__hour= 13).filter(rserv_room= 3).exists()
     rserv14_2= rservs.filter(rserv_date__hour= 14).filter(rserv_room= 2).exists()
-    rserv14_3= rservs.filter(rserv_date__hour= 14).filter(rserv_room= 3).exists()
     rserv15_2= rservs.filter(rserv_date__hour= 15).filter(rserv_room= 2).exists()
-    rserv15_3= rservs.filter(rserv_date__hour= 15).filter(rserv_room= 3).exists()
     rserv16_2= rservs.filter(rserv_date__hour= 16).filter(rserv_room= 2).exists()
-    rserv16_3= rservs.filter(rserv_date__hour= 16).filter(rserv_room= 3).exists()
     rserv17_2= rservs.filter(rserv_date__hour= 17).filter(rserv_room= 2).exists()
-    rserv17_3= rservs.filter(rserv_date__hour= 17).filter(rserv_room= 3).exists()
 
     return render(request, 'table/rserv_date.html',\
-                {'rservdate': pk, 'rserv11_2': rserv11_2, 'rserv11_3': rserv11_3, 'rserv12_2': rserv12_2, 'rserv12_3': rserv12_3, 'rserv13_2': rserv13_2, 'rserv13_3': rserv13_3,\
-                'rserv14_2': rserv14_2, 'rserv14_3': rserv14_3, 'rserv15_2': rserv15_2, 'rserv15_3': rserv15_3, 'rserv16_2': rserv16_2, 'rserv16_3': rserv16_3,\
-                 'rserv17_2': rserv17_2, 'rserv17_3': rserv17_3,  })
+                {'rservdate': pk, 'rserv11_2': rserv11_2, 'rserv12_2': rserv12_2, 'rserv13_2': rserv13_2,\
+                'rserv14_2': rserv14_2, 'rserv15_2': rserv15_2, 'rserv16_2': rserv16_2,\
+                 'rserv17_2': rserv17_2,  })
 
 def rserv_info(request, rdate, pk, room):
     datetime_pk= datetime.combine(datemake(rdate), timemake(pk))
