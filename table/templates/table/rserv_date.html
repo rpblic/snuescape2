@@ -2,7 +2,7 @@
 
 {% block booking %}
 <table class="table table-hover text-center">
-  <tr><th colspan=3 class="tg-yw4l">예약시간</th></tr>
+  <tr><th class="tg-yw4l">예약시간</th></tr>
   <tr class="time11">
       {% if not rserv11_2 %}<td class="tg-yw4l"><a href="{% url 'rserv_info' rdate=rservdate pk=11 room=2 %}">
         11시~12시
