@@ -1,1 +1,1 @@
-web: gunicorn snuescape2.escapeweb.wsgi --log-file -
+web: gunicorn escapeweb.wsgi --log-file -
