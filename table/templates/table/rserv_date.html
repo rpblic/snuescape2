@@ -8,7 +8,7 @@
         11시~12시
       </a></td>{% endif %}
       {% if rserv11_2 %}<td class="danger">
-        {{ rserv11_2.rserv_er }} 님 예약
+        {% for rserv in rserv11_2 %}{{ rserv.rserv_er }}{% endfor %} 님 예약
       </td>{% endif %}
   </tr>
 
@@ -17,7 +17,7 @@
         12시~13시
       </a></td>{% endif %}
       {% if rserv12_2 %}<td class="danger">
-        {{ rserv12_2.rserv_er }} 님 예약
+        {% for rserv in rserv12_2 %}{{ rserv.rserv_er }}{% endfor %} 님 예약
       </td>{% endif %}
   </tr>
 
@@ -26,7 +26,7 @@
         13시~14시
       </a></td>{% endif %}
       {% if rserv13_2 %}<td class="danger">
-        {{ rserv13_2.rserv_er }} 님 예약
+        {% for rserv in rserv13_2 %}{{ rserv.rserv_er }}{% endfor %} 님 예약
       </td>{% endif %}
   </tr>
 
@@ -35,7 +35,7 @@
         14시~15시
       </a></td>{% endif %}
       {% if rserv14_2 %}<td class="danger">
-        {{ rserv14_2.rserv_er }} 님 예약
+        {% for rserv in rserv14_2 %}{{ rserv.rserv_er }}{% endfor %} 님 예약
       </td>{% endif %}
   </tr>
 
@@ -44,7 +44,7 @@
         15시~16시
       </a></td>{% endif %}
       {% if rserv15_2 %}<td class="danger">
-        {{ rserv15_2.rserv_er }} 님 예약
+        {% for rserv in rserv15_2 %}{{ rserv.rserv_er }}{% endfor %} 님 예약
       </td>{% endif %}
   </tr>
 
@@ -53,7 +53,7 @@
         16시~17시
       </a></td>{% endif %}
       {% if rserv16_2 %}<td class="danger">
-        {{ rserv16_2.rserv_er }} 님 예약
+        {% for rserv in rserv16_2 %}{{ rserv.rserv_er }}{% endfor %} 님 예약
       </td>{% endif %}
   </tr>
 
@@ -62,7 +62,7 @@
         17시~18시
       </a></td>{% endif %}
       {% if rserv17_2 %}<td class="danger">
-        {{ rserv17_2 }} 님 예약
+        {% for rserv in rserv17_2 %}{{ rserv.rserv_er }}{% endfor %} 님 예약
       </td>{% endif %}
   </tr>
 </table>
