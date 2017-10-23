@@ -32,6 +32,6 @@ td {
     color: white;
 }
 
-.danger{
+.danger td{
     text-decoration: line-through;
 }

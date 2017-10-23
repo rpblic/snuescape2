@@ -78,6 +78,14 @@ WSGI_APPLICATION = 'escapeweb.wsgi.application'
 import dj_database_url
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'snuescape2',
+    #     'USER': 'snuescape2',
+    #     'PASSWORD': '4yw6rtht426u',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '5432',
+    # }
     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 }
 
