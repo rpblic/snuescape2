@@ -7,49 +7,63 @@
       {% if not rserv11_2 %}<td class="tg-yw4l"><a href="{% url 'rserv_info' rdate=rservdate pk=11 room=2 %}">
         11시~12시
       </a></td>{% endif %}
-      {% if rserv11_2 %}<td class="danger">11시~12시</td>{% endif %}
+      {% if rserv11_2 %}<td class="danger">
+        {{ rserv11_2.rserv_er }} 님 예약
+      </td>{% endif %}
   </tr>
 
   <tr class="time12">
       {% if not rserv12_2 %}<td class="tg-yw4l"><a href="{% url 'rserv_info' rdate=rservdate pk=12 room=2 %}">
         12시~13시
       </a></td>{% endif %}
-      {% if rserv12_2 %}<td class="danger">12시~13시</td>{% endif %}
+      {% if rserv12_2 %}<td class="danger">
+        {{ rserv12_2.rserv_er }} 님 예약
+      </td>{% endif %}
   </tr>
 
   <tr class="time13">
       {% if not rserv13_2 %}<td class="tg-yw4l"><a href="{% url 'rserv_info' rdate=rservdate pk=13 room=2 %}">
         13시~14시
       </a></td>{% endif %}
-      {% if rserv13_2 %}<td class="danger">13시~14시</td>{% endif %}
+      {% if rserv13_2 %}<td class="danger">
+        {{ rserv13_2.rserv_er }} 님 예약
+      </td>{% endif %}
   </tr>
 
   <tr class="time14">
       {% if not rserv14_2 %}<td class="tg-yw4l"><a href="{% url 'rserv_info' rdate=rservdate pk=14 room=2 %}">
         14시~15시
       </a></td>{% endif %}
-      {% if rserv14_2 %}<td class="danger">14시~15시</td>{% endif %}
+      {% if rserv14_2 %}<td class="danger">
+        {{ rserv14_2.rserv_er }} 님 예약
+      </td>{% endif %}
   </tr>
 
   <tr class="time15">
       {% if not rserv15_2 %}<td class="tg-yw4l"><a href="{% url 'rserv_info' rdate=rservdate pk=15 room=2 %}">
         15시~16시
       </a></td>{% endif %}
-      {% if rserv15_2 %}<td class="danger">15시~16시</td>{% endif %}
+      {% if rserv15_2 %}<td class="danger">
+        {{ rserv15_2.rserv_er }} 님 예약
+      </td>{% endif %}
   </tr>
 
   <tr class="time16">
       {% if not rserv16_2 %}<td class="tg-yw4l"><a href="{% url 'rserv_info' rdate=rservdate pk=16 room=2 %}">
         16시~17시
       </a></td>{% endif %}
-      {% if rserv16_2 %}<td class="danger">16시~17시</td>{% endif %}
+      {% if rserv16_2 %}<td class="danger">
+        {{ rserv16_2.rserv_er }} 님 예약
+      </td>{% endif %}
   </tr>
 
   <tr class="time17">
       {% if not rserv17_2 %}<td class="tg-yw4l"><a href="{% url 'rserv_info' rdate=rservdate pk=17 room=2 %}">
         17시~18시
       </a></td>{% endif %}
-      {% if rserv17_2 %}<td class="danger">17시~18시</td>{% endif %}
+      {% if rserv17_2 %}<td class="danger">
+        {{ rserv17_2.rserv_er }} 님 예약
+      </td>{% endif %}
   </tr>
 </table>
 {% endblock %}
